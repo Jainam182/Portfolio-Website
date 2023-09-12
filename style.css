@@ -1,10 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-body {
+body{
     background-color: black;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     justify-content: space-between;
 }
+
 
 .header-container {
     display: flex;
@@ -12,15 +13,16 @@ body {
     align-items: center;
     position: relative;
     top: 0%;
-    width: 100vw;
-    padding: 0vh 0vh 0vh 5px;
+    width: 100%;
+    padding: 0px 0px 0px 5px;
+
 }
 
 .logo-container {
     display: flex;
     align-items: center;
     color: white;
-    font-size: 6vw; /* Adjust the font size based on your design */
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
     position: relative;
@@ -34,10 +36,10 @@ body {
     position: absolute;
     top: 0;
     left: 100%;
-    font-size: 6vw; /* Adjust the font size based on your design */
+    font-size: 40px;
     white-space: nowrap;
     opacity: 0;
-    transform: translateX(1vw); /* Adjust the value based on your design */
+    transform: translateX(10px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     visibility: hidden;
 }
@@ -52,10 +54,10 @@ body {
     transform: translateX(0);
     visibility: visible;
 }
-
 nav ul {
     text-align: center;
-    box-shadow: 0 0 2.5vw rgba(0, 0, 0, 0.1), inset 0 0 0.1vw;
+    
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px ;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -66,34 +68,36 @@ nav ul li {
 }
 
 nav ul li a {
-    padding: 4.5vh 4.5vw; /* Adjust padding based on your design */
+    padding: 18px;
     font-family: "Open Sans";
     text-transform: uppercase;
     color: red;
-    font-size: 4.5vw; /* Adjust the font size based on your design */
+    font-size: 18px;
     text-decoration: none;
     display: block;
 }
 
 nav ul li a:hover {
-    box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1), inset 0 0 0.1vw rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
     background: rgba(255, 255, 255, 0.1);
-    color: blue;
+    color: blue
 }
-
 .qwerty {
     color: white;
-    font-size: 12vw; /* Adjust the font size based on your design */
-    margin-bottom: 0;
-    margin-left: 2.5vw; /* Adjust the margin based on your design */
-    margin-top: 10vh;
+    font-size: 100px;
+    margin-bottom: 0%;
+    margin-left: 10%;
+    margin-top: 10%;
+
 }
 
 .line2 {
     color: white;
-    font-size: 8.4vw; /* Adjust the font size based on your design */
-    margin-top: 2vh;
-    margin-left: 2.5vw; /* Adjust the margin based on your design */
+    font-size: 70px;
+    margin-top: 2%;
+    margin-left: 10%;
+    
+    
 }
 
 .changing-color {
@@ -111,106 +115,109 @@ nav ul li a:hover {
         color: skyblue; /* Change to your desired color */
     }
     75% {
-        color: turquoise; /* Change to your desired color */
+        color: Turquoise; /* Change to your desired color */
     }
     100% {
         color: gold; /* Change back to the starting color */
     }
 }
-
-.image {
+.image{
     position: absolute;
-    top: 25vh;
-    left: 75vw;
-    width: 25vw; /* Adjust the width based on your design */
+    top: 25%;
+    left: 75%;
+    width: 250px;
 }
+    
+
 
 .intro {
-    margin-left: 2.5vw; /* Adjust the margin based on your design */
-    margin-top: 2vh;
-    font-size: 3vw; /* Adjust the font size based on your design */
+    margin-left: 10%;
+    margin-top: 2%;
+    font-size: 30px;
     color: #ffffff;
-    width: 30vw; /* Adjust the width based on your design */
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 0.15vw solid;
-    font-family: monospace;
+}
+.intro {
+  width: 30ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
 }
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
+  from {
+      width: 0;
+  }
 }
 
 /* Hide the cursor when the animation is finished */
 .intro.animation-finished {
-    border-right: none;
+  border-right: none;
 }
 
 * {
     padding: 0;
     margin: 0;
-}
-
-.fabs {
+  }
+  
+  .fabs {
     position: fixed;
-    right: 2.5vw;
-    bottom: 2.5vh;
-}
-
-.action {
-    background: red;
-    height: 5vh;
-    width: 5vw;
+    right: 20px;
+    bottom: 20px;
+  }
+  
+  .action {
+    background:red;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
-    box-shadow: 0 1.25vh 1.75vw 0px gray;
+    box-shadow: 0 5px 7px 0px gray;
     transition: background-color 0.4s ease-in-out;
-}
-
-.action i {
+  }
+  
+  .action i {
     position: absolute;
     color: white;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5vw;
+    font-size: 25px;
     cursor: pointer;
-}
-
-.action:hover {
+  }
+  
+  .action:hover {
     background-color: blue;
-}
-
-.btn {
+  }
+  
+  .btn {
     position: absolute;
-    height: 1.75vh;
-    width: 1.75vw;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
-}
-
-.btn i {
+  }
+  
+  .btn i {
     position: absolute;
-    font-size: 0.9vw;
+    font-size: 18px;
     color: white;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-}
-
-.btns {
+  }
+  
+  .btns {
     position: absolute;
-    bottom: 0vh;
-    margin-bottom: 1.25vh;
-    height: 1.75vh;
-    width: 1.75vw;
+    bottom: 0px;
+    margin-bottom: 5px;
+    height: 35px;
+    width: 35px;
     transition: 0.3s ease-in-out;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
-}
-
-.btns.open {
-    bottom: 5vh;
-}
+  }
+  .btns.open {
+    bottom: 50px;
+  }
