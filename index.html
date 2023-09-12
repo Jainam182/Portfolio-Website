@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jainam Jagani | Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+</head>
+<body>
+    <div class="header-container">
+        <div class="logo-container">
+            <span class="logo-text">J<font style="color: red;">J</font></span>
+            <span class="expanded-text"><font style="color: red;">Jainam</font>&nbsp;&nbsp;Jagani</span>
+
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Resume</a>
+                </li>
+                <li>
+                    <a href="#">Projects</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+            <p class="qwerty">
+                I am a
+            </p>
+            <h1 class="line2">
+                Front-End <span class="changing-color">Developer.</span>
+            </h1>
+            <div>
+              <h1><img class="image" src="jd.png"></h1>  <h3 class="intro">Jainam Jagani | Web Developer</h3>
+
+              <script>
+                function startAnimation() {
+                    const introElement = document.querySelector('.intro');
+                    introElement.style.animation = 'none'; // Reset the animation
+                    void introElement.offsetWidth; // Trigger a reflow
+                    introElement.style.animation = 'typing 2s steps(22), blink .5s step-end infinite alternate';
+        
+                    const randomInterval = Math.floor(Math.random() * (30000 - 10000 + 1)) + 10000; // Random interval between 10s and 30s
+                    setTimeout(() => {
+                        introElement.classList.add('animation-finished'); // Add a class to hide the cursor
+                    }, 2000); // Assuming the animation duration is 2 seconds
+        
+                    setTimeout(() => {
+                        introElement.classList.remove('animation-finished'); // Remove the class to show the cursor again
+                        startAnimation(); // Start the animation again
+                    }, randomInterval + 2000); // Reset the animation after the random interval + 2 seconds
+                }
+        
+                // Initial start
+                startAnimation();
+            </script>
+            </div>
+                
+                <div class="fabs" onclick="toggleBtn()">
+                    <div class="action">
+                      <i class="fas fa-plus" id="add"></i>
+                      <i class="fas fa-times" id="remove" style="display: none"></i>
+                    </div>
+              
+                    <div class="btns">
+                      <a href="https://www.linkedin.com/in/jainam-jagani-b855a6279" class="btn" style="background: #3b5999"
+                        ><i class="fab fa-linkedin"></i
+                      ></a>
+                      <a href="https://x.com/jaganijainam300?t=8skg9DlgJN0mXW-W14HUMg&s=09" class="btn" style="background: #55acee"
+                        ><i class="fab fa-twitter"></i
+                      ></a>
+                      <a href="https://github.com/Jainam182" class="btn" style="background: #25D366"
+                        ><i class="fab fa-github"></i
+                      ></a>
+                      <a href="https://www.instagram.com/jxj_018/?igshid=MzMyNGUyNmU2YQ%3D%3D" class="btn" style="background:#e4405f"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </div>
+                  </div>
+                </body>
+                <script>
+                  function toggleBtn() {
+                    const Btns = document.querySelector(".btns");
+                    const add = document.getElementById("add");
+                    const remove = document.getElementById("remove");
+                    const btn = document.querySelector(".btns").querySelectorAll("a");
+                    Btns.classList.toggle("open");
+                    if (Btns.classList.contains("open")) {
+                      remove.style.display = "block";
+                      add.style.display = "none";
+                      btn.forEach((e, i) => {
+                        setTimeout(() => {
+                          bottom = 40 * i;
+                          e.style.bottom = bottom + "px";
+                          console.log(e);
+                        }, 100 * i);
+                      });
+                    } else {
+                      add.style.display = "block";
+                      remove.style.display = "none";
+                      btn.forEach((e, i) => {
+                        e.style.bottom = "0px";
+                      });
+                    }
+                  }
+                </script>
+              </html>
+
+</body>
+</html>
