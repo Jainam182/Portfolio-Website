@@ -38,24 +38,25 @@
                 Front-End <span class="changing-color">Developer.</span>
             </h1>
             <div>
-              <h1><img class="image" src="jd.png"></h1>  <h3 class="intro">Jainam Jagani | Web Developer</h3>
+              <h1><img class="image" src="jj.png.png"></h1>  
+              <h3 class="intro">Jainam Jagani | Web Developer</h3>
 
               <script>
                 function startAnimation() {
                     const introElement = document.querySelector('.intro');
-                    introElement.style.animation = 'none'; // Reset the animation
-                    void introElement.offsetWidth; // Trigger a reflow
+                    introElement.style.animation = 'none';
+                    void introElement.offsetWidth;
                     introElement.style.animation = 'typing 2s steps(22), blink .5s step-end infinite alternate';
         
-                    const randomInterval = Math.floor(Math.random() * (30000 - 10000 + 1)) + 10000; // Random interval between 10s and 30s
+                    const randomInterval = Math.floor(Math.random() * (30000 - 10000 + 1)) + 10000;
                     setTimeout(() => {
-                        introElement.classList.add('animation-finished'); // Add a class to hide the cursor
-                    }, 2000); // Assuming the animation duration is 2 seconds
+                        introElement.classList.add('animation-finished');
+                    }, 2000);
         
                     setTimeout(() => {
-                        introElement.classList.remove('animation-finished'); // Remove the class to show the cursor again
-                        startAnimation(); // Start the animation again
-                    }, randomInterval + 2000); // Reset the animation after the random interval + 2 seconds
+                        introElement.classList.remove('animation-finished');
+                        startAnimation();
+                    }, randomInterval + 2000);
                 }
         
                 // Initial start
